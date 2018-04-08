@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<title>vueCheckBox</title>
+<link rel="stylesheet" href="magic-check.css">
+<link rel="stylesheet" href="iCheck/orange.css">
+</head>
+<body>
+	<div id="app">
+		<!--checkbox  -->
+		 <!-- <input type="checkbox" name="iCheck" v-model="checked"> -->
+		<input class="magic-checkbox" type="checkbox" id="checkbox" v-model="checked">
+		<label for="checkbox">{{checked}}</label>
+		
+		
+		
+		<p>{{checkedNames}}</p>
+		<input type="checkbox" class="magic-checkbox" id="jack" value="Jack" v-model="checkedNames">
+		<label for="jack">Jack</label>
+		<input type="checkbox" class="magic-checkbox" id="john" value="John" v-model="checkedNames">
+		<label for="john">John</label>
+		<input type="checkbox" class="magic-checkbox" id="mike" value="Mike" v-model="checkedNames">
+		<label for="mike">Mike</label>
+		
+
+
+		<!-- radio -->
+		<input type="radio" class="magic-radio" id="one" value="One" v-model="picked">
+  		<label for="one">One</label>
+  		<br>
+		<input type="radio" class="magic-radio" id="two" value="Two" v-model="picked">
+		<label for="two">Two</label>
+		<p>picked:{{picked}}</p>
+	</div>
+<script src="http://lib.sinaapp.com/js/jquery/1.6/jquery.min.js"></script>
+<script src="iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="http://static.jsk365.com/lib/vue/2.5.3/vue.min.js"></script>
+<script>
+	
+
+
+	var app = new Vue({
+		el:"#app",
+		data:{
+			checked:false,
+			checkedNames:[],
+			picked:""
+		},
+		mounted:function(){
+			// $(document).ready(function(){
+			// 	$('input').iCheck({
+			// 	    checkboxClass: 'icheckbox_square-orange',
+			// 	    radioClass: 'iradio_square-orange',
+			// 	    increaseArea: '20%' // optional
+			// 	});
+			// })
+		}
+	})
+</script>
+</body>
+</html>
